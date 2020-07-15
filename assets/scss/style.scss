@@ -1,0 +1,197 @@
+
+@import "../../libs/normalize-scss/sass/normalize/import-now";
+@import "skin";
+@import "variables";
+@import "mixins";
+@import "mixins-media";
+@import "extends";
+
+@import "common";
+@import "header/header";
+@import "header/header-overlay";
+@import "header/header-menu";
+@import "header/header-logo";
+@import "header/header-navbar";
+@import "header/header-content";
+
+@import "sections/section-skills";
+@import "sections/section-about";
+@import "sections/section-form";
+@import "sections/section-posts";
+
+@import "footer";
+
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family:"Roboto" , sans-serif;
+    font-size: 16px;
+    letter-spacing:  0.1em;
+    color: #637588;
+    overflow-y:scroll;
+}
+.header-content__title{
+font-family: "Roboto Slab" , sans-serif;
+font-size: 3.75rem;
+font-weight:300;
+line-height: 1.2rem;
+letter-spacing: 0.08rem;
+
+}
+.header{
+    display:flex;
+    height: 100vh;
+    background-image: url(../img/img-header.png);
+    background-position:50% 50%;
+    background-size:cover;
+    position: relative;
+    align-items: center;
+    color: #ffffff;
+    padding: 100px 0px;
+}
+.header-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #2d3651;
+    opacity: .8;
+}
+.header-menu{  
+position: absolute;
+top:0;
+left:0;
+z-index: 1;
+width: 100%;
+&__box{
+    display: grid;
+    grid-template-columns:auto 1fr;
+    max-width: 1340px;
+    margin:auto;
+}
+
+}
+.header-content{
+    display: grid;
+    justify-content: center;
+z-index:1;
+width: 100%;
+&__box{
+    max-width: 1340px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+}
+
+.header-logo{
+font-size: 1.5rem;
+margin-top:18%;
+margin-left:17%;
+
+}
+
+.header-logo__link{
+    display:block;
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 0.30rem;
+    padding: 7px;   
+
+}
+.header-logo__accent{
+    border: 3px solid #d53d27;
+    padding:14px 1px 13px 5px;
+}
+
+.header-nav{
+   &__link{
+       display: inline-block;
+       padding: 20px;
+       font-size:1.125rem;
+       text-decoration: none;
+   color: #ffffff;
+}
+&__menu{
+    display: grid;
+    grid-template-columns:repeat(auto-fit , minmax(50px,max-content));
+    list-style: none;
+    justify-content:end;
+    font-size:1.185rem 
+}
+}
+
+.butons{
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    border: 3px solid #ffffff;
+    padding:1.8% 2.8%;
+    margin-top:2.7%;
+    margin-left:2%;
+    min-width:230px; 
+    
+}
+
+
+.header-content__btn{
+   display: flex;
+   justify-content: center;
+   
+
+}
+
+
+
+
+
+
+.skills-box{
+    display: grid;
+    grid-gap:10px;  
+    grid-template-columns:repeat( 4,1fr);
+    grid-template-areas: "a1 a1 a2 a3"
+                         "a4 a5 a5 a6"
+                         "a7 a8 a9 a6";
+}
+
+.skills-item{
+    background-color: rgb(8, 163, 60);
+
+    &__img{
+        background-image:url(../img/img-html.png);
+    }
+
+}
+
+.skills-item:nth-of-type(1){
+    grid-area: a1;
+}
+.skills-item:nth-of-type(2){
+    grid-area: a2;
+}
+.skills-item:nth-of-type(3){
+    grid-area: a3;
+}
+.skills-item:nth-of-type(4){
+    grid-area: a4;
+}
+.skills-item:nth-of-type(5){
+    grid-area: a5;
+}
+.skills-item:nth-of-type(6) {
+    grid-area: a6;
+}
+.skills-item:nth-of-type(7) {
+    grid-area: a7;
+}
+.skills-item:nth-of-type(8) {
+    grid-area: a8;
+}
+.skills-item:nth-of-type(9) {
+    grid-area: a9;
+}
+
+
