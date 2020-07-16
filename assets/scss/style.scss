@@ -143,11 +143,6 @@ margin-left:17%;
 
 }
 
-
-
-
-
-
 .skills-box{
     display: grid;
     grid-gap:10px;  
@@ -155,13 +150,68 @@ margin-left:17%;
     grid-template-areas: "a1 a1 a2 a3"
                          "a4 a5 a5 a6"
                          "a7 a8 a9 a6";
-}
+    margin: 10px 20px 0px 10px;
 
+                        
+                       
+}
+@mixin image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-repeat:no-repeat;
+    background-size: cover;
+    :hover{
+        scale: 1.2;
+    }
+    
+}
 .skills-item{
     background-color: rgb(8, 163, 60);
+    position: relative;
+    min-height: calc( 33.33vh - 13.33px); 
+   
 
-    &__img{
+    &__img--html{
+        @include image;
         background-image:url(../img/img-html.png);
+        
+        
+    }
+    &__img--css{
+        @include image;
+        background-image:url(../img/img-css.png)
+    }
+    &__img--markup{
+        @include image;
+        background-image: url(../img/img-markup.png);
+    }
+    &__img--design{
+        @include image;
+        background-image: url(../img/img-webdesign.png);
+    }
+    &__img--quality{
+        @include image;
+        background-image: url(../img/img-qa.png);
+    }
+    &__img--codding{
+        @include image;
+        background-image: url(../img/img-codding.png) ;
+    }
+    &__img--adaptabillity{
+        @include image;
+        background-image: url(../img/img-adaptability.png);
+    }
+    &__img--php{
+        @include image;
+        background-image: url(../img/img-php.png);
+    }
+    &__img--seo{
+        @include image;
+        background-image: url(../img/img-seo.png);
+        tesadvdfbf
     }
 
 }
@@ -193,5 +243,3 @@ margin-left:17%;
 .skills-item:nth-of-type(9) {
     grid-area: a9;
 }
-
-

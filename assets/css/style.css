@@ -607,15 +607,149 @@ html {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+  grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+  margin: 10px 20px 0px 10px;
 }
 
 .skills-item {
   background-color: #08a33c;
+  position: relative;
+  min-height: calc( 33.33vh - 13.33px);
 }
 
-.skills-item__img {
+.skills-item__img--html {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url(../img/img-html.png);
+}
+
+.skills-item__img--html :hover {
+  scale: 1.2;
+}
+
+.skills-item__img--css {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/img-css.png);
+}
+
+.skills-item__img--css :hover {
+  scale: 1.2;
+}
+
+.skills-item__img--markup {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/img-markup.png);
+}
+
+.skills-item__img--markup :hover {
+  scale: 1.2;
+}
+
+.skills-item__img--design {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/img-webdesign.png);
+}
+
+.skills-item__img--design :hover {
+  scale: 1.2;
+}
+
+.skills-item__img--quality {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/img-qa.png);
+}
+
+.skills-item__img--quality :hover {
+  scale: 1.2;
+}
+
+.skills-item__img--codding {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/img-codding.png);
+}
+
+.skills-item__img--codding :hover {
+  scale: 1.2;
+}
+
+.skills-item__img--adaptabillity {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/img-adaptability.png);
+}
+
+.skills-item__img--adaptabillity :hover {
+  scale: 1.2;
+}
+
+.skills-item__img--php {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/img-php.png);
+}
+
+.skills-item__img--php :hover {
+  scale: 1.2;
+}
+
+.skills-item__img--seo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/img-seo.png);
+}
+
+.skills-item__img--seo :hover {
+  scale: 1.2;
 }
 
 .skills-item:nth-of-type(1) {
