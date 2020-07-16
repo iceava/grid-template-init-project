@@ -1,8 +1,2 @@
 node_modules/
 # IntellijIdea files
-.idea/
-libs/
-.DS_Store
-*.js
-*.png
-*.json
