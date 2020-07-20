@@ -603,6 +603,7 @@ html {
   min-width: 230px;
   letter-spacing: 0.12rem;
   font-size: 1.125rem;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .buton2 {
@@ -615,6 +616,7 @@ html {
   letter-spacing: 0.120rem;
   font-size: 1.125rem;
   margin-right: .5%;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .header-content__btn {
