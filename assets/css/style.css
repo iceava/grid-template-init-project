@@ -526,6 +526,7 @@ html {
   grid-template-columns: auto 1fr;
   max-width: 1340px;
   margin: auto;
+  padding-left: 17px;
 }
 
 .header-content {
@@ -552,7 +553,6 @@ html {
   font-size: 1.5rem;
   font-size: 1.5rem;
   margin-top: 2.3%;
-  margin-left: 17.2%;
   line-height: 0.8rem;
 }
 
@@ -560,14 +560,14 @@ html {
   display: block;
   text-decoration: none;
   color: #ffffff;
-  letter-spacing: 0.3167rem;
+  letter-spacing: 0.328rem;
   padding: 3px;
 }
 
 .header-logo__accent {
   border: 3px solid #d53d27;
-  padding: 13px 2px 12px 4.5px;
-  margin-right: 3%;
+  padding: 13px 1px 12px 5px;
+  margin-right: 4px;
 }
 
 .header-nav__link {
@@ -587,8 +587,6 @@ html {
       -ms-flex-pack: end;
           justify-content: end;
   font-size: 1.185rem;
-  margin-right: -1.2%;
-  padding-right: .25%;
   padding-top: 1px;
 }
 
@@ -634,12 +632,16 @@ html {
   margin-left: 4px;
 }
 
+.skills {
+  padding: 10px 10px 40px;
+}
+
 .skills-box {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
-  padding: 10px 10px 20px 10px;
+  padding: 0px 0px 20px 0px;
 }
 
 .skills-item {
@@ -656,6 +658,7 @@ html {
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
   background-image: url(../img/img-html.png);
 }
 
@@ -667,6 +670,7 @@ html {
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
   background-image: url(../img/img-css.png);
 }
 
@@ -678,6 +682,7 @@ html {
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
   background-image: url(../img/img-markup.png);
 }
 
@@ -689,6 +694,7 @@ html {
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
   background-image: url(../img/img-webdesign.png);
 }
 
@@ -700,6 +706,7 @@ html {
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
   background-image: url(../img/img-qa.png);
 }
 
@@ -711,6 +718,7 @@ html {
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
   background-image: url(../img/img-codding.png);
 }
 
@@ -722,6 +730,7 @@ html {
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
   background-image: url(../img/img-adaptability.png);
 }
 
@@ -733,6 +742,7 @@ html {
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
   background-image: url(../img/img-php.png);
 }
 
@@ -744,6 +754,7 @@ html {
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
   background-image: url(../img/img-seo.png);
 }
 
@@ -760,10 +771,13 @@ html {
 
 .skills-item__title {
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
   letter-spacing: 0.1em;
-  height: 100%;
-  width: 100%;
+  font-size: 1.25rem;
 }
 
 .skills-item__link {
@@ -799,11 +813,11 @@ html {
   background-color: rgba(45, 54, 81, 0.8);
   display: block;
   height: 60px;
-  padding: 18px 115px;
+  padding: 18px 96px;
   color: #fff;
   text-align: center;
-  letter-spacing: 0.1em;
-  font-size: 1.125rem;
+  letter-spacing: 0.112em;
+  font-size: 1.10rem;
   width: auto;
 }
 
@@ -843,14 +857,36 @@ html {
   grid-area: a9;
 }
 
+.abt {
+  background: #e5e5e5;
+  letter-spacing: 0.055em;
+  padding: 100px 0px;
+}
+
 .about {
   display: grid;
   grid-template-columns: 1fr 274px;
-  background: #e5e5e5;
   max-width: 1340px;
   margin: auto;
-  padding: 0px 20px;
+  padding: 0px 19.5px;
   grid-gap: 100px;
+}
+
+.about-content__title {
+  margin-top: 0px;
+  letter-spacing: 0.1em;
+  color: #2d3651;
+  font-family: "Roboto Slab" , serif;
+  line-height: 1.2em;
+  font-size: 2.5rem;
+  margin-bottom: 56px;
+}
+
+.about-content__prg {
+  font-size: 1.125rem;
+  color: #637588;
+  letter-spacing: 0.048em;
+  line-height: 1.15em;
 }
 
 .about-content__prg:first-of-type {
@@ -860,12 +896,17 @@ html {
 
 .about-content__prg:first-of-type::after {
   position: absolute;
-  top: 0;
-  right: 0px;
+  top: 0px;
+  right: -52px;
   width: 2px;
   height: 200px;
   content: "";
   background-color: rgba(99, 117, 136, 0.1);
+}
+
+img[alt="lamp-webdev"] {
+  max-height: 480px;
+  max-width: 100%;
 }
 
 .form {
