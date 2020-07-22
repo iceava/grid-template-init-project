@@ -526,6 +526,7 @@ html {
   grid-template-columns: auto 1fr;
   max-width: 1340px;
   margin: auto;
+  margin-left: 14.2%;
 }
 
 .header-content {
@@ -590,6 +591,11 @@ html {
   margin-right: -1.2%;
   padding-right: .25%;
   padding-top: 1px;
+<<<<<<< HEAD
+}
+
+.buton1 {
+=======
 }
 
 .buton1 {
@@ -606,12 +612,30 @@ html {
 }
 
 .buton2 {
+>>>>>>> 50decc4f543d73aeeb37f81621f5b1a5f86a750b
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  padding: 18px 67.5px;
+<<<<<<< HEAD
+  margin-right: 1.85%;
+  min-width: 230px;
+  letter-spacing: 0.12rem;
+  font-size: 1.125rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.buton2 {
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
   border: 2px solid #ffffff;
   padding: 18px 67.5px;
   min-width: 230px;
+=======
+  min-width: 230px;
+>>>>>>> 50decc4f543d73aeeb37f81621f5b1a5f86a750b
   letter-spacing: 0.120rem;
   font-size: 1.125rem;
   margin-right: .5%;
