@@ -1063,6 +1063,7 @@ img[alt="post-item"] {
 .footer {
   padding: 50px 20px 70px;
   text-align: center;
+  background-color: #2d3651;
   z-index: -2;
 }
 
@@ -1075,4 +1076,8 @@ img[alt="post-item"] {
 
 i {
   font-size: 36px;
+}
+
+.social__link {
+  color: #fff;
 }
