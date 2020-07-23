@@ -1059,3 +1059,20 @@ img[alt="post-item"] {
   max-width: 380px;
   margin: 0 auto;
 }
+
+.footer {
+  padding: 50px 20px 70px;
+  text-align: center;
+  z-index: -2;
+}
+
+.footer-content {
+  max-width: 1340px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+i {
+  font-size: 36px;
+}
