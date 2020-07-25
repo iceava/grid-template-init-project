@@ -32,6 +32,7 @@ html{
     overflow-y:scroll;
     overflow-x: hidden;
 }
+
 .header-content__title{
 font-family: "Roboto Slab" , sans-serif;
 font-size: 3.77rem;
@@ -342,7 +343,8 @@ line-height:0.8rem;;
 .abt{
     background: #e5e5e5;
     letter-spacing: 0.055em;
-    padding: 100px 0px;
+    padding:100px 0px 85px 0px;
+    
 }
 .about{
     display:grid;
@@ -359,7 +361,7 @@ line-height:0.8rem;;
     font-family: "Roboto Slab" , serif;
     line-height: 1.2em;
     font-size: 2.5rem;
-    margin-bottom: 56px;
+    margin-bottom:56px;
 }
 .about-content__prg{
     font-size: 1.125rem;
@@ -383,6 +385,11 @@ line-height:0.8rem;;
 img[alt="lamp-webdev"]{
     max-height: 480px;
     max-width:100%;
+    
+}
+.about-content__img{
+    margin-bottom: 11px;
+    margin-left: 5px;
 }
 .form{
     padding: 30px 0;
@@ -392,9 +399,9 @@ img[alt="lamp-webdev"]{
     display: flex;
     width: 100%;
     max-width: 1340px;
-    margin: auto;
-    padding-right: 20px;
-    padding-left: 20px;
+    margin:0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
     justify-content: space-around;
 }
 .form-item{
@@ -404,7 +411,7 @@ width:32%;
 .form-item__input{
     background-color: rgba(255, 255, 255, 0.05);
     height: 60px;
-    padding: 18px 88px;
+    padding: 20px 88px;
     width:100%;
     color: #fff;
     letter-spacing: 0.1em;
@@ -432,11 +439,16 @@ input[type="text"]{
 }
 
 .post{
+    display: flex;
+    justify-content: center;
+}
+.post-box{
     max-width:1340px;
-    margin: 40px 22px;
+    margin: 70px 22px 100px 22px;
 }
 .post-item{
     background-color: #f2f2f2;
+    overflow: hidden;
 }
 .post__item{
     display: grid;
@@ -444,6 +456,7 @@ input[type="text"]{
     grid-template-areas : "a1 a1 a2 a3"
                           "a4 a5 a6 a6" ;
     grid-gap:20px;
+    padding: 23px 20px 20px 20px ;
 }
 .post-item:nth-of-type(1){
     grid-area: a1;
@@ -473,19 +486,28 @@ img[alt="post-item"]{
     color: #2d3651;
     font-family: "Roboto Slab", serif;
     line-height: 1.2em;
+    margin-left:22px;
+    
 }
 .post-item__caption{
     display:grid;
+    align-content: center;
     padding:20px;
 }
 .post-item__caption--title{
     font-family: "Roboto Slab",serif;
+    font-size: 1.125rem;
     text-align: center;
     color: #637588;
+    letter-spacing: 0.048em;
+
 }
 .post-item__caption--prg{
     text-align: center;
     color: #637588;
+    font-family:"Roboto";
+    font-size: 1rem;
+    letter-spacing: 0.001em;
     
 }
 .post-item__link{
@@ -496,9 +518,11 @@ img[alt="post-item"]{
     height: 100%;
     
     
+    
 }
 .post-btn{
-width: 100%;
+display:flex;
+justify-content: center;
 }
 .post-btn__accent{
     display: block;
@@ -512,20 +536,42 @@ width: 100%;
     text-align: center;
     letter-spacing: 0.112em;
     font-size: 1.10rem;
-    max-width: 380px;
+    width: 350px;
     margin: 0 auto;
 }
 .footer{
     padding: 50px 20px 70px;
     text-align: center;
     background-color: #2d3651;
-    z-index: -2;
+    
+ 
 }
 .footer-content{
+    position: relative;
     max-width: 1340px;
     margin: auto;
+    text-align: center;
     padding-right: 20px;
     padding-left: 20px;
+    &__social::after{
+        position: absolute;
+        right: calc(50% - 75px / 2);
+        bottom:55.5px;
+        content: "";
+        width: 75px;
+        height: 2px;
+        background:rgba(255, 255, 255, 0.1);
+    }
+        &__social{
+            margin-bottom:49.5px;
+        height: 100%;
+        margin-top:10px;
+        }
+    
+}
+.social__link{
+    margin:0px 6.4px;
+    display: inline-block;
 }
 
 i{
@@ -533,4 +579,20 @@ i{
 }
 .social__link{
     color: #fff;
+}
+.footer-content span:nth-of-type(1){
+ margin-left:8px;
+letter-spacing:.323em;
+font-weight:100;
+font-size: 1rem;
+color: #637588;
+
+}
+.footer-content__copy span{
+    display: block;
+    color: #fff;
+    letter-spacing: .05em;;
+    font-weight: bold;
+    line-height:0.1.05em;
+    font-size: 1rem;
 }
