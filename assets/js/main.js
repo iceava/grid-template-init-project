@@ -1,9 +1,6 @@
-
-$(document).ready(function () {
-
-  $('.header-navbar__hamburger').on('click', function () {
-    $(this).toggleClass('active');
-    $('.header-navbar__list').toggleClass('active');
-  });
-
+$(document).ready(function(){
+	$('.header-nav__btn').click(function(){
+		$(this).toggleClass('header-nav__btn--active');
+		$('.header-nav__menu').toggleClass('active');
+	});
 });
