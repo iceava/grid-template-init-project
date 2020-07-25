@@ -491,7 +491,6 @@ html {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  background-image: url(../img/img-header.png);
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
@@ -508,8 +507,6 @@ html {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #2d3651;
-  opacity: .8;
 }
 
 .header-menu {
@@ -659,7 +656,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(../img/img-html.png);
 }
 
 .skills-item__img--css {
@@ -671,7 +667,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(../img/img-css.png);
 }
 
 .skills-item__img--markup {
@@ -683,7 +678,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(../img/img-markup.png);
 }
 
 .skills-item__img--design {
@@ -695,7 +689,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(../img/img-webdesign.png);
 }
 
 .skills-item__img--quality {
@@ -707,7 +700,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(../img/img-qa.png);
 }
 
 .skills-item__img--codding {
@@ -719,7 +711,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(../img/img-codding.png);
 }
 
 .skills-item__img--adaptabillity {
@@ -731,7 +722,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(../img/img-adaptability.png);
 }
 
 .skills-item__img--php {
@@ -743,7 +733,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(../img/img-php.png);
 }
 
 .skills-item__img--seo {
@@ -755,7 +744,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(../img/img-seo.png);
 }
 
 .skills-item__overlay {
@@ -765,8 +753,6 @@ html {
   left: 0;
   bottom: 0;
   z-index: 1;
-  background: #2d3651;
-  opacity: .8;
 }
 
 .skills-item__title {
@@ -859,7 +845,7 @@ html {
 .abt {
   background: #e5e5e5;
   letter-spacing: 0.055em;
-  padding: 100px 0px 85px 0px;
+  padding: 100px 0px 80px 0px;
 }
 
 .about {
@@ -1118,6 +1104,7 @@ img[alt="post-item"] {
   margin-bottom: 49.5px;
   height: 100%;
   margin-top: 10px;
+  margin-left: 2px;
 }
 
 .social__link {
@@ -1146,6 +1133,6 @@ i {
   color: #fff;
   letter-spacing: .05em;
   font-weight: bold;
-  line-height: 0.1 0.05em;
+  line-height: 1.15em;
   font-size: 1rem;
 }

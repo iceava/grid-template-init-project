@@ -45,7 +45,6 @@ padding-left: 02px;
 .header{
     display:flex;
     height: 100vh;
-    background-image: url(../img/img-header.png);
     background-position:50% 50%;
     background-size:cover;
     position: relative;
@@ -59,8 +58,6 @@ padding-left: 02px;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #2d3651;
-    opacity: .8;
 }
 .header-menu{  
 position: absolute;
@@ -218,41 +215,40 @@ line-height:0.8rem;;
 
     &__img--html{
         @include image;
-        background-image:url(../img/img-html.png);
         
         
     }
     &__img--css{
         @include image;
-        background-image:url(../img/img-css.png)
+       
     }
     &__img--markup{
         @include image;
-        background-image: url(../img/img-markup.png);
+       
     }
     &__img--design{
         @include image;
-        background-image: url(../img/img-webdesign.png);
+       
     }
     &__img--quality{
         @include image;
-        background-image: url(../img/img-qa.png);
+       
     }
     &__img--codding{
         @include image;
-        background-image: url(../img/img-codding.png) ;
+        
     }
     &__img--adaptabillity{
         @include image;
-        background-image: url(../img/img-adaptability.png);
+        
     }
     &__img--php{
         @include image;
-        background-image: url(../img/img-php.png);
+        
     }
     &__img--seo{
         @include image;
-        background-image: url(../img/img-seo.png);
+        
         
     }
     &__overlay{
@@ -261,9 +257,7 @@ line-height:0.8rem;;
         right: 0;
         left: 0;
         bottom: 0;
-        z-index: 1;
-        background: #2d3651;
-        opacity: .8;   
+        z-index: 1;    
     }
 
 }
@@ -343,7 +337,7 @@ line-height:0.8rem;;
 .abt{
     background: #e5e5e5;
     letter-spacing: 0.055em;
-    padding:100px 0px 85px 0px;
+    padding:100px 0px 80px 0px;
     
 }
 .about{
@@ -566,6 +560,7 @@ justify-content: center;
             margin-bottom:49.5px;
         height: 100%;
         margin-top:10px;
+        margin-left:2px;
         }
     
 }
@@ -593,6 +588,6 @@ color: #637588;
     color: #fff;
     letter-spacing: .05em;;
     font-weight: bold;
-    line-height:0.1.05em;
+    line-height:1.15em;
     font-size: 1rem;
 }
