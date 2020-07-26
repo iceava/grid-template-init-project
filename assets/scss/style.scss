@@ -37,11 +37,30 @@ html{
 font-family: "Roboto Slab" , sans-serif;
 font-size: 3.77rem;
 font-weight:300;
-line-height: 1.2rem;
+line-height: 1.2em;
 letter-spacing: .285rem;
-padding-left: 02px;
-
+padding-left: 2px;
+text-align: center;
+@include lg-min {
+    font-size: 3.77rem;
+    }
+    @media (max-width: 991.8px) and (min-width: 768px){
+        font-size: 2.5rem;
+        margin: 0 0 43px;
+    }
+    @include md{ 
+        font-size: 1.875rem;
+    }
+    @include sm{
+        letter-spacing: .1em;
+        padding-top: -20px;
+        
+        
+    }
 }
+
+
+ 
 .header{
     display:flex;
     height: 100vh;
@@ -103,9 +122,12 @@ width: 100%;
     padding-right: 20px;
     text-align: center;
     height: 100%;
-     margin-top:-56px;
-    
+     margin-top:-2.5%;
+    @include sm-min {
+        margin-top:-3%;
     }
+    }
+
 
 }
 
@@ -175,63 +197,150 @@ line-height:0.8rem;;
     right:20px;
     background: #41556b;
 }
-.buton1{
+@mixin btn {
     display: inline-block;
     color: #ffffff;
     text-decoration: none;
     border: 2px solid #ffffff;
     padding:18px 67.5px;
-    margin-right:1.85%;
     min-width:230px;
     letter-spacing: 0.12rem;
     font-size: 1.125rem;
-    background:rgba($color: #fff, $alpha:0.1)
-  
-    
-    
+    background:rgba($color: #fff, $alpha:0.1);
+
+}
+@include lg-md{
+    .buton2 , .buton1{
+    min-width: 200px;
+    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+    margin-right:20px;
+    }
+} 
+@include md-sm{
+    .buton1, .buton2 {
+        min-width: 170px;
+        height: 40px;
+        padding: 10px 40px;
+        padding-bottom: 10px;
+        letter-spacing: 0.05em;
+        font-size: 1rem;
+        margin-right:20px;
+        margin-bottom:-3%;
+    }
+}
+@include sm{
+    .buton1 , .buton2{
+    min-width: 170px;
+    height: 40px;
+    padding: 10px 30px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+    margin-right: 20px;
+    }
+}
+.buton1{
+    @include btn;
+    margin-right:$gap;
+    @include sm{
+        margin-bottom:-8%;
+       
+    }
+   
 }
 
     .buton2{
-        display: inline-block;
-        color: #ffffff;
-        text-decoration: none;
-        border: 2px solid #ffffff;
-        padding:18px 67.5px;
-        min-width:230px;
-        letter-spacing: 0.120rem;
-        font-size: 1.125rem;
-        margin-right: .5%;
-        background:rgba($color: #fff, $alpha:0.1)
-        
+        @include btn;
+        margin-right: .5%;        
 }
 
 
 .header-content__btn{
    display: flex;
    justify-content: center;
-   align-items:flex-end;
-   margin-top:-2px;
+   align-items:flex-start;
+   padding: 12px 50px;
+   flex-wrap: wrap;
    height: 100%;
    width: 100%;
    margin-left:4px;
-   
+   @include sm{
+       padding: 20px 40px;
+   }
 
 }
+
 .skills{
     padding: 10px 10px 40px;
 }
 .skills-box{
     display: grid;
-    grid-gap:10px;  
-    grid-template-columns:repeat( 4,1fr);
-    grid-template-areas: "a1 a1 a2 a3"
-                         "a4 a5 a5 a6"
-                         "a7 a8 a9 a6";
+   
+ 
+    @include lg-min{
+        grid-gap:$gap/2;  
+        grid-template-columns:repeat( 4,1fr);
+        grid-template-areas: "a1 a1 a2 a3"
+                             "a4 a5 a5 a6"
+                             "a7 a8 a9 a6";
+        padding:0px 0px 20px 0px;
+    }                 
+ @include lg-md{
+    margin: $gap/2;
+    grid-gap:$gap/2;  
+    grid-template-columns:repeat( 3,1fr);
+    grid-template-areas: "a1 a1 a2"
+                         "a3 a4 a4"
+                         "a5 a5 a6"
+                         "a7 a8 a6"
+                         "a7 a9 a9";
     padding:0px 0px 20px 0px;
+    } 
 
-                        
-                       
+    @include md-sm{
+        margin: $gap/2;
+        grid-gap:$gap/2;  
+        grid-template-columns:repeat( 2,1fr);
+        grid-template-areas: "a1 a2"
+                             "a3 a2"
+                             "a4 a4"
+                             "a5 a6"
+                             "a5 a7"
+                             "a8 a9";
+        padding:0px 0px 20px 0px;
+    }
+
+    @include sm{
+        margin: $gap/2;
+        grid-gap:$gap;  
+        grid-template-columns:repeat( 1,1fr);
+        grid-template-areas: "a1"
+                             "a2"                            
+                             "a3"
+                             "a4"                            
+                             "a5"                           
+                             "a6"
+                             "a7"
+                             "a8"
+                             "a9";
+        
+    }
 }
+
+.skills{
+    @include sm-min{
+        padding:($gap/2) ($gap/2) ($gap*2);
+    }
+    @include sm{
+        padding:$gap;
+
+    }
+}
+
+
 @mixin image {
     position: absolute;
     top: 0;
@@ -318,6 +427,12 @@ line-height:0.8rem;;
         text-decoration:none;
         color: #ffffff; 
         font-size: 1.25rem;
+        @include md-sm{
+            font-size: 1.1rem;
+        }
+        @include md{
+            font-size: 1.1rem;
+        }
         
     }
        
@@ -339,6 +454,10 @@ line-height:0.8rem;;
         text-align: center;
         letter-spacing: 0.112em;
         font-size: 1.10rem;
+        @include sm{
+            width: 100%;
+            margin:$gap/2 ;
+        }
     }
 
 
@@ -373,16 +492,35 @@ line-height:0.8rem;;
 .abt{
     background: #e5e5e5;
     letter-spacing: 0.055em;
-    padding:100px 0px 80px 0px;
-    
+    padding:100px 0px 0px 0px;
+    height:100%;
+
 }
 .about{
     display:grid;
-    grid-template-columns: 1fr 274px;
+    
     max-width: 1340px;
     margin: auto;
     padding: 0px 19.5px;
-    grid-gap: 100px; 
+   
+    
+
+    @include lg-min{
+        grid-template-columns: 1fr 271px;
+        grid-gap: 100px; 
+    }
+    @include lg-md{
+        grid-template-columns: 1fr 271px;
+        grid-gap: 40px;
+    }
+    @include md-sm{
+        grid-template-columns: 1fr 236px;
+        grid-gap: 20px;
+    }
+    @include sm{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
 }
 .about-content__title{
     margin-top: 0px;
@@ -392,12 +530,25 @@ line-height:0.8rem;;
     line-height: 1.2em;
     font-size: 2.5rem;
     margin-bottom:56px;
+    @include lg-md{
+        font-size: 2rem;
+    }
+    @include md-sm{
+        font-size: 1.5rem;
+    }
+    @include sm{
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }
 .about-content__prg{
-    font-size: 1.125rem;
     color: #637588;
     letter-spacing: 0.048em;
-    line-height:1.15em;
+    line-height:1.22em;
+    margin: -3px 0px 18px;
+    @include lg-min{
+        font-size: 1.125rem;
+    }
 }
 .about-content__prg:first-of-type{
     position: relative;
@@ -406,7 +557,7 @@ line-height:0.8rem;;
 .about-content__prg:first-of-type::after{
     position: absolute;
     top: 0px;
-    right:-52px;
+    right:-38px;
     width: 2px;
     height: 200px;
     content: "";
@@ -415,27 +566,65 @@ line-height:0.8rem;;
 img[alt="lamp-webdev"]{
     max-height: 480px;
     max-width:100%;
-    
+
 }
 .about-content__img{
-    margin-bottom: 11px;
+    margin-top:3px;
     margin-left: 5px;
+    display: grid;
+    align-content: start;
+    justify-items: center;
+    @include lg-md{
+        margin-top:0px;
+        margin-top: 120px;
+    
+    }
+    @include md-sm{
+        
+        margin-top:0px;
+        margin-top:120px;
+     
+
+    }
+
 }
 .form{
+    display: flex;
+    justify-content: center;
     padding: 30px 0;
-    background-color: #2d3651;
+    margin-top: 30px;background-color: #2d3651;
+
 }
 .form-container{
-    display: flex;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:$gap;
+    justify-items: center;
     width: 100%;
     max-width: 1340px;
-    margin:0 auto;
-    padding-right: 10px;
-    padding-left: 10px;
-    justify-content: space-around;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    @include md-sm{
+        grid-template-columns:1fr 1fr;
+        grid-gap:$gap;
+        justify-items: center;
+       
+    }
+    @include md{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 .form-item{
-width:32%;
+width:100%;
+
+}
+.form-item:nth-of-type(1) {
+    @include md-sm
+    {
+    grid-column: 1 / span 2;
+    }
 }
 
 .form-item__input{
@@ -449,7 +638,9 @@ width:32%;
     border-bottom:solid 2px rgba(255, 255, 255, 0.2);
     font-size: 1.125rem;
     letter-spacing: 0.15em;
+    
 }
+
 input[type="text"]{
     padding: 1px 28px;
 }
@@ -461,7 +652,7 @@ input[type="text"]{
     border-bottom:solid 2px rgba(255, 255, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.1);
     height: 60px;
-    padding: 18px 150px;
+    padding: 18px 50px;
     color: #fff;
     letter-spacing: 0.1em;
     font-size: 1.125rem;
