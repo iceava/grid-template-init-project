@@ -358,40 +358,40 @@ line-height:0.8rem;;
     
    
 
-    &__img--html{
+    &__img-html{
         @include image;
         
         
     }
-    &__img--css{
+    &__img-css{
         @include image;
        
     }
-    &__img--markup{
+    &__img-markup{
         @include image;
        
     }
-    &__img--design{
+    &__img-design{
         @include image;
        
     }
-    &__img--quality{
+    &__img-quality{
         @include image;
        
     }
-    &__img--codding{
+    &__img-codding{
         @include image;
         
     }
-    &__img--adaptabillity{
+    &__img-adaptabillity{
         @include image;
         
     }
-    &__img--php{
+    &__img-php{
         @include image;
         
     }
-    &__img--seo{
+    &__img-seo{
         @include image;
         
         
@@ -546,8 +546,12 @@ line-height:0.8rem;;
     letter-spacing: 0.048em;
     line-height:1.22em;
     margin: -3px 0px 18px;
-    @include lg-min{
-        font-size: 1.125rem;
+    font-size: 1.125rem;
+    @include md-sm{
+        font-size: 0.88rem;
+    }
+    @include sm{
+        font-size: 0.88rem;
     }
 }
 .about-content__prg:first-of-type{

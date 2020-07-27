@@ -640,7 +640,7 @@ html {
   min-height: calc( 33.33vh - 13.33px);
 }
 
-.skills-item__img--html {
+.skills-item__img-html {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -651,7 +651,7 @@ html {
   background-position: 50% 50%;
 }
 
-.skills-item__img--css {
+.skills-item__img-css {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -662,7 +662,7 @@ html {
   background-position: 50% 50%;
 }
 
-.skills-item__img--markup {
+.skills-item__img-markup {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -673,7 +673,7 @@ html {
   background-position: 50% 50%;
 }
 
-.skills-item__img--design {
+.skills-item__img-design {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -684,7 +684,7 @@ html {
   background-position: 50% 50%;
 }
 
-.skills-item__img--quality {
+.skills-item__img-quality {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -695,7 +695,7 @@ html {
   background-position: 50% 50%;
 }
 
-.skills-item__img--codding {
+.skills-item__img-codding {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -706,7 +706,7 @@ html {
   background-position: 50% 50%;
 }
 
-.skills-item__img--adaptabillity {
+.skills-item__img-adaptabillity {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -717,7 +717,7 @@ html {
   background-position: 50% 50%;
 }
 
-.skills-item__img--php {
+.skills-item__img-php {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -728,7 +728,7 @@ html {
   background-position: 50% 50%;
 }
 
-.skills-item__img--seo {
+.skills-item__img-seo {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -864,6 +864,7 @@ html {
   letter-spacing: 0.048em;
   line-height: 1.22em;
   margin: -3px 0px 18px;
+  font-size: 1.125rem;
 }
 
 .about-content__prg:first-of-type {
@@ -1293,9 +1294,6 @@ i {
     grid-template-columns: 1fr 271px;
     grid-gap: 100px;
   }
-  .about-content__prg {
-    font-size: 1.125rem;
-  }
 }
 
 @media (max-width: 991.8px) {
@@ -1417,6 +1415,9 @@ i {
   .about-content__title {
     font-size: 1.5rem;
   }
+  .about-content__prg {
+    font-size: 0.88rem;
+  }
   .about-content__img {
     margin-top: 0px;
     margin-top: 120px;
@@ -1476,5 +1477,8 @@ i {
   .about-content__title {
     font-size: 1.5rem;
     text-align: center;
+  }
+  .about-content__prg {
+    font-size: 0.88rem;
   }
 }
