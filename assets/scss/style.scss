@@ -669,37 +669,88 @@ input[type="text"]{
 }
 .post-item{
     background-color: #f2f2f2;
-    overflow: hidden;
+    display:grid;
+    justify-content: center;
 }
 .post__item{
     display: grid;
     grid-template-columns:repeat(4,1fr);
-    grid-template-areas : "a1 a1 a2 a3"
-                          "a4 a5 a6 a6" ;
+    grid-template-areas : "p1 p1 p2 p3"
+                          "p4 p5 p6 p6" ;
     grid-gap:20px;
     padding: 23px 20px 20px 20px ;
+    @include lg{
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+        grid-template-areas : "p1 p1 p2 p3"
+                              "p4 p5 p6 p6" ;
+        grid-gap:20px;
+        padding: 23px 20px 20px 20px ;
+    }
+
+    @include lg-md{
+    grid-template-columns:repeat(3,1fr);
+    grid-template-areas : "p1 p1 p2"
+                          "p3 p4 p4"
+                          "p5 p6 p6";
+                          
+    grid-gap:20px;
+    padding: 10px ;
+  
+    }
+    @include md-sm{
+
+            grid-template-columns:1fr 1fr;
+            grid-template-areas : "p1 p2"
+                                  "p3 p4"
+                                  "p5 p6";
+                                  
+                                  
+            grid-gap:20px;
+            padding: 10px;
+    }
+    @include md {
+
+        grid-template-columns:1fr;
+        grid-template-areas : "p1"
+                              "p2"
+                              "p3"
+                              "p4"
+                              "p5"
+                              "p6";
+                              
+        grid-gap:20px;
+        padding:10px ;
 }
+}
+
 .post-item:nth-of-type(1){
-    grid-area: a1;
+    grid-area: p1;
 }
 .post-item:nth-of-type(2){
-    grid-area: a2;
+    grid-area: p2;
 }
 .post-item:nth-of-type(3){
-    grid-area: a3;
+    grid-area: p3;
 }
 .post-item:nth-of-type(4){
-    grid-area: a4;
+    grid-area: p4;
 }
 .post-item:nth-of-type(5){
-    grid-area: a5;
+    grid-area: p5;
 }
 .post-item:nth-of-type(6){
-    grid-area: a6;
+    grid-area: p6;
 }
-img[alt="post-item"]{
-    object-fit: cover;
+img[alt="image-post"]{
     width: 100%;
+    object-fit: cover;
+}
+.post-item__img{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content:center;
 }
 .post-box__title{
     font-size: 2.5rem;
@@ -721,6 +772,7 @@ img[alt="post-item"]{
     text-align: center;
     color: #637588;
     letter-spacing: 0.048em;
+    padding-bottom: $gap*2;
 
 }
 .post-item__caption--prg{
