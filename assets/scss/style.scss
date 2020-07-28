@@ -29,7 +29,6 @@ html{
     font-size: 16px;
     letter-spacing:  0.1em;
     color: #637588;
-    overflow-y:scroll;
     overflow-x: hidden;
 }
 
@@ -211,7 +210,7 @@ line-height:0.8rem;;
     background:rgba($color: #fff, $alpha:0.1);
     &:hover{
         background-color:$color-accent;
-        transition-duration: .5s;
+        transition: .5s;
     }
     &:focus{
         background-color: $color-accent;
@@ -306,10 +305,10 @@ line-height:0.8rem;;
                              "a4 a5 a5 a6"
                              "a7 a8 a9 a6";
         padding:0px 0px 20px 0px;
+        
     }                 
- @include lg-md{
-    margin: $gap/2;
-    grid-gap:$gap/2;  
+ @include lg-md{  
+    grid-gap:$gap/2; 
     grid-template-columns:repeat( 3,1fr);
     grid-template-areas: "a1 a1 a2"
                          "a3 a4 a4"
@@ -320,7 +319,6 @@ line-height:0.8rem;;
     } 
 
     @include md-sm{
-        margin: $gap/2;
         grid-gap:$gap/2;  
         grid-template-columns:repeat( 2,1fr);
         grid-template-areas: "a1 a2"
@@ -333,7 +331,6 @@ line-height:0.8rem;;
     }
 
     @include sm{
-        margin: $gap/2;
         grid-gap:$gap;  
         grid-template-columns:repeat( 1,1fr);
         grid-template-areas: "a1"
@@ -360,61 +357,37 @@ line-height:0.8rem;;
 }
 
 
-@mixin image {
+.skills-item__img{
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom:0;
     right: 0;
     left: 0;
-    background-repeat:no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position:50% 50%;
+    transition: .5s;
 }
+
 .skills-item{
     background-color: rgb(8, 163, 60);
     position: relative;
-    min-height: calc( 33.33vh - 13.33px);
-    
-   
+    min-height: calc( 33.3333vh - 13.3333px);
+    overflow: hidden;
+ 
+    &:hover .skills-item__img{
+     transform: scale(1.1);
+     transition: 0.5s;
+    }
+    &:hover .skills-item__link{
+     color: $color-accent;
+     transition: 0.5s;
+    }
+    &:hover .skills-item__overlay{
+     opacity: 0.95 !important;
+     transition: 0.5s;
+    }
+ 
 
-    &__img-html{
-        @include image;
-        
-        
-    }
-    &__img-css{
-        @include image;
-       
-    }
-    &__img-markup{
-        @include image;
-       
-    }
-    &__img-design{
-        @include image;
-       
-    }
-    &__img-quality{
-        @include image;
-       
-    }
-    &__img-codding{
-        @include image;
-        
-    }
-    &__img-adaptabillity{
-        @include image;
-        
-    }
-    &__img-php{
-        @include image;
-        
-    }
-    &__img-seo{
-        @include image;
-        
-        
-    }
     &__overlay{
         position: absolute;
         top: 0;
@@ -422,10 +395,12 @@ line-height:0.8rem;;
         left: 0;
         bottom: 0;
         z-index: 1;    
+        transition: opacity 0.5s;
     }
 
 }
 .skills-item{
+    
     &__title{
     position:absolute;
     top: 0;
@@ -446,6 +421,8 @@ line-height:0.8rem;;
         text-decoration:none;
         color: #ffffff; 
         font-size: 1.25rem;
+        transition: 0.5s;
+       
         @include md-sm{
             font-size: 1.1rem;
         }
@@ -519,7 +496,7 @@ line-height:0.8rem;;
 .abt{
     background: #e5e5e5;
     letter-spacing: 0.055em;
-    padding:100px 0px 100px 0px;
+    padding:100px 0px 80px 0px;
     height:100%;
 
 }
@@ -652,22 +629,24 @@ img[alt="lamp-webdev"]{
         grid-gap:$gap;
         justify-items: center;
        
-    }
-    @include md{
-        display: grid;
-        grid-template-columns: 1fr;
+    }  
+    @include sm{
+        grid-template-columns:1fr;
+       
     }
 }
-.form-item{
-width:100%;
 
-}
 .form-item:nth-of-type(1) {
     @include md-sm
     {
     grid-column: 1 / span 2;
     }
 }
+.form-item{
+    width:100%;
+
+}
+
 
 .form-item__input{
     background-color: rgba($color-light ,  0.05);
@@ -721,6 +700,7 @@ input[type="text"]{
 
     }
     &:focus{
+        outline: none;
         background-color:$color-accent;
         border:2px solid $color-light;
     }
@@ -739,6 +719,11 @@ input[type="text"]{
     background-color: #f2f2f2;
     display:grid;
     justify-content: center;
+    &:hover{
+        transform: scale(1.1);
+        transition: .5s;
+       
+    }
 }
 .post__item{
     display: grid;
@@ -868,7 +853,6 @@ img[alt="image-post"]{
     text-decoration: none;
     display: grid;
     grid-template-rows: 300px 1fr;
-    overflow: hidden;
     height: 100%;
     padding-bottom: 20px;
     
@@ -893,7 +877,7 @@ justify-content: center;
     font-size: 1.10rem;
     width: 350px;
     margin: 0 auto;
-    transition-duration:background-color .5s;
+    transition:background-color .5s;
     @include sm{
     width: 100%;
     margin: 0px 10px;
@@ -937,16 +921,22 @@ justify-content: center;
         }
     
 }
-.social__link{
-    margin:0px 6.4px;
-    display: inline-block;
-}
 
 i{
     font-size: 36px;
 }
 .social__link{
+    margin:0px 6.4px;
+    display: inline-block;
     color: #fff;
+    transition:color .5s;
+    &:hover{
+        color:$color-accent;
+        transition:color .5s;
+    }
+    &:focus{
+        color:$color-accent;
+    }
 }
 .footer-content span:nth-of-type(1){
  margin-left:8px;
