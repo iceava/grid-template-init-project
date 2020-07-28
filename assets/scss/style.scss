@@ -206,9 +206,17 @@ line-height:0.8rem;;
     padding:18px 67.4px;
     min-width:230px;
     letter-spacing: 0.12rem;
+    transition: background-color .5s;
     font-size: 1.125rem;
     background:rgba($color: #fff, $alpha:0.1);
-
+    &:hover{
+        background-color:$color-accent;
+        transition-duration: .5s;
+    }
+    &:focus{
+        background-color: $color-accent;
+    }
+   
 }
 @include lg-md{
     .buton2 , .buton1{
@@ -248,10 +256,8 @@ line-height:0.8rem;;
     margin-right:$gap;
     @include sm{
         margin-bottom:-10%;
-       
-    }
-    
-   
+
+    } 
 }
 
     .buton2{
@@ -274,6 +280,17 @@ line-height:0.8rem;;
    }
   
 }
+.header-nav__link{
+    transition: color .5s;
+    &:hover{
+        color: $color-accent;
+    transition-duration: .5s;
+    }
+    &:focus{
+        color: $color-accent; 
+    }
+}
+
 
 .skills{
     padding: 10px 10px 40px;
@@ -456,9 +473,17 @@ line-height:0.8rem;;
         text-align: center;
         letter-spacing: 0.112em;
         font-size: 1.10rem;
+        transition:background-color .5s;
         @include sm{
             width: 100%;
             margin:$gap/2 ;
+        }
+        &:hover{
+            background-color:$color-accent;
+            transition:background-color .5s;
+        }
+        &:focus{
+            background-color:$color-accent;
         }
     }
 
@@ -645,17 +670,31 @@ width:100%;
 }
 
 .form-item__input{
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba($color-light ,  0.05);
     height: 60px;
     padding: 20px 88px;
     width:100%;
-    color: #fff;
+    border: 2px solid rgba($color-light ,  0);
+    color: $color-light;
     letter-spacing: 0.1em;
     font-size: 1.125rem;
-    border-bottom:solid 2px rgba(255, 255, 255, 0.2);
+    transition: background-color .5s, border-color .5s;
+    border-bottom:solid 2px rgba($color-light , 0.2);
     font-size: 1.125rem;
     letter-spacing: 0.15em;
-    
+
+   &:hover{
+    border-color: rgba($color-light , 0.15);
+    border-bottom: 2px solid $color-light;
+    background-color: rgba($color-light , 0.15);
+    transition: background-color .5s,  border-color .5s;
+   }
+   &:focus{
+    outline:none;
+    border: 2px solid rgba($color-light, 0.15);
+    border-bottom: 2px solid $color-light;
+    background-color: rgba($color-light , 0.15);
+   }
 }
 
 input[type="text"]{
@@ -664,7 +703,7 @@ input[type="text"]{
 .form-item__btn{
     display:block;
     width: 100%;
-    color: #ffffff;
+    color:$color-light;
     border-color: rgba(255, 255, 255, 0);
     border-bottom:solid 2px rgba(255, 255, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.1);
@@ -674,6 +713,18 @@ input[type="text"]{
     letter-spacing: 0.1em;
     font-size: 1.125rem;
     cursor: pointer;
+    transition: background-color .5s, border .5s;
+    &:hover{
+        background-color:$color-accent;
+        border:2px solid $color-light;
+        transition:background-color .5s, border .5s;
+
+    }
+    &:focus{
+        background-color:$color-accent;
+        border:2px solid $color-light;
+    }
+
 }
 
 .post{
@@ -794,6 +845,7 @@ img[alt="image-post"]{
     display:grid;
     align-content: center;
     padding:20px;
+    margin-top: 20px;
 }
 .post-item__caption--title{
     font-family: "Roboto Slab",serif;
@@ -818,6 +870,7 @@ img[alt="image-post"]{
     grid-template-rows: 300px 1fr;
     overflow: hidden;
     height: 100%;
+    padding-bottom: 20px;
     
     
     
@@ -840,9 +893,17 @@ justify-content: center;
     font-size: 1.10rem;
     width: 350px;
     margin: 0 auto;
+    transition-duration:background-color .5s;
     @include sm{
     width: 100%;
     margin: 0px 10px;
+    }
+    &:hover{
+        background-color:$color-accent;
+        transition:background-color .5s;
+    }
+    &:focus{
+        background-color:$color-accent;
     }
 }
 .footer{

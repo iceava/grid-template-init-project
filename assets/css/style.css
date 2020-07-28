@@ -591,9 +591,23 @@ html {
   padding: 18px 67.4px;
   min-width: 230px;
   letter-spacing: 0.12rem;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
   font-size: 1.125rem;
   background: rgba(255, 255, 255, 0.1);
   margin-right: 20px;
+}
+
+.buton1:hover {
+  background-color: #d66926;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.buton1:focus {
+  background-color: #d66926;
 }
 
 .buton2 {
@@ -604,9 +618,23 @@ html {
   padding: 18px 67.4px;
   min-width: 230px;
   letter-spacing: 0.12rem;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
   font-size: 1.125rem;
   background: rgba(255, 255, 255, 0.1);
   margin-right: .5%;
+}
+
+.buton2:hover {
+  background-color: #d66926;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.buton2:focus {
+  background-color: #d66926;
 }
 
 .header-content__btn {
@@ -625,6 +653,23 @@ html {
   height: 100%;
   width: 100%;
   margin-left: 4px;
+}
+
+.header-nav__link {
+  -webkit-transition: color .5s;
+  -o-transition: color .5s;
+  transition: color .5s;
+}
+
+.header-nav__link:hover {
+  color: #d66926;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.header-nav__link:focus {
+  color: #d66926;
 }
 
 .skills {
@@ -798,6 +843,20 @@ html {
   text-align: center;
   letter-spacing: 0.112em;
   font-size: 1.10rem;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.button-accent:hover {
+  background-color: #d66926;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.button-accent:focus {
+  background-color: #d66926;
 }
 
 .skills-item:nth-of-type(1) {
@@ -928,12 +987,32 @@ img[alt="lamp-webdev"] {
   height: 60px;
   padding: 20px 88px;
   width: 100%;
-  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0);
+  color: #ffffff;
   letter-spacing: 0.1em;
   font-size: 1.125rem;
+  -webkit-transition: background-color .5s, border-color .5s;
+  -o-transition: background-color .5s, border-color .5s;
+  transition: background-color .5s, border-color .5s;
   border-bottom: solid 2px rgba(255, 255, 255, 0.2);
   font-size: 1.125rem;
   letter-spacing: 0.15em;
+}
+
+.form-item__input:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-transition: background-color .5s,  border-color .5s;
+  -o-transition: background-color .5s,  border-color .5s;
+  transition: background-color .5s,  border-color .5s;
+}
+
+.form-item__input:focus {
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 input[type="text"] {
@@ -953,6 +1032,22 @@ input[type="text"] {
   letter-spacing: 0.1em;
   font-size: 1.125rem;
   cursor: pointer;
+  -webkit-transition: background-color .5s, border .5s;
+  -o-transition: background-color .5s, border .5s;
+  transition: background-color .5s, border .5s;
+}
+
+.form-item__btn:hover {
+  background-color: #d66926;
+  border: 2px solid #ffffff;
+  -webkit-transition: background-color .5s, border .5s;
+  -o-transition: background-color .5s, border .5s;
+  transition: background-color .5s, border .5s;
+}
+
+.form-item__btn:focus {
+  background-color: #d66926;
+  border: 2px solid #ffffff;
 }
 
 .post {
@@ -1041,6 +1136,7 @@ img[alt="image-post"] {
   -ms-flex-line-pack: center;
       align-content: center;
   padding: 20px;
+  margin-top: 20px;
 }
 
 .post-item__caption--title {
@@ -1066,6 +1162,7 @@ img[alt="image-post"] {
   grid-template-rows: 300px 1fr;
   overflow: hidden;
   height: 100%;
+  padding-bottom: 20px;
 }
 
 .post-btn {
@@ -1091,6 +1188,20 @@ img[alt="image-post"] {
   font-size: 1.10rem;
   width: 350px;
   margin: 0 auto;
+  -webkit-transition-duration: background-color .5s;
+       -o-transition-duration: background-color .5s;
+          transition-duration: background-color .5s;
+}
+
+.post-btn__accent:hover {
+  background-color: #d66926;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.post-btn__accent:focus {
+  background-color: #d66926;
 }
 
 .footer {
