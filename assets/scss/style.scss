@@ -436,6 +436,9 @@ line-height:0.8rem;;
     .skills-button{
     display: flex;
     justify-content: center;
+        @include sm {
+            margin-top: 20px;
+        }
       }
       
     .button-accent{
@@ -453,7 +456,6 @@ line-height:0.8rem;;
         transition:background-color .5s;
         @include sm{
             width: 100%;
-            margin:$gap/2 ;
         }
         &:hover{
             background-color:$color-accent;
@@ -713,17 +715,30 @@ input[type="text"]{
 }
 .post-box{
     max-width:1340px;
-    margin: 70px 22px 100px 22px;
+    margin: 98px 0px;
 }
 .post-item{
-    background-color: #f2f2f2;
+    background-color: $color-light-dark;
     display:grid;
     justify-content: center;
-    &:hover{
-        transform: scale(1.1);
-        transition: .5s;
-       
+    &:hover .post-item__link{
+        background-color:#d8d8d8;
     }
+
+   &:hover  .post-item__img{
+        transform: scale(1.1);
+        transition: transform .5s;
+    }
+
+    &:hover .post-item__caption-prg{
+        color:$color-primary;
+    }
+    &:hover .post-item__caption-title{
+        color:$color-primary;
+    }
+    
+    overflow: hidden;
+
 }
 .post__item{
     display: grid;
@@ -732,6 +747,7 @@ input[type="text"]{
                           "p4 p5 p6 p6" ;
     grid-gap:20px;
     padding: 23px 20px 20px 20px ;
+    
     @include lg{
         display: grid;
         grid-template-columns:repeat(4,1fr);
@@ -796,18 +812,20 @@ input[type="text"]{
     grid-area: p6;
 }
 img[alt="image-post"]{
-    width: 100%;
-    object-fit: cover;
+   object-fit: cover;
+   width: 100%;
+   
 }
 .post-item__img{
     display: flex;
-    width: 100%;
     justify-content: center;
     align-content:center;
+    transition: transform .5s;
 }
 .post-box__title{
     font-size: 2.5rem;
     letter-spacing: 0.1em;
+    margin-bottom: 32px;
     color: #2d3651;
     font-family: "Roboto Slab", serif;
     line-height: 1.2em;
@@ -832,18 +850,19 @@ img[alt="image-post"]{
     padding:20px;
     margin-top: 20px;
 }
-.post-item__caption--title{
-    font-family: "Roboto Slab",serif;
+.post-item__caption-title{
+    font-family: "Roboto Slab" , serif;
     font-size: 1.125rem;
     text-align: center;
-    color: #637588;
+    color: $color-gray;
     letter-spacing: 0.048em;
-    padding-bottom: $gap*2;
-
+    padding-bottom: $gap * 2;
+    
 }
-.post-item__caption--prg{
+
+.post-item__caption-prg{
     text-align: center;
-    color: #637588;
+    color: $color-gray;
     font-family:"Roboto";
     font-size: 1rem;
     letter-spacing: 0.001em;

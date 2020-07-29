@@ -1005,7 +1005,7 @@ input[type="text"] {
 
 .post-box {
   max-width: 1340px;
-  margin: 70px 22px 100px 22px;
+  margin: 98px 0px;
 }
 
 .post-item {
@@ -1014,15 +1014,30 @@ input[type="text"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
-.post-item:hover {
+.post-item:hover .post-item__link {
+  background-color: #d8d8d8;
+}
+
+.post-item:hover .post-item__img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.post-item:hover .post-item__caption-prg {
+  color: #2d3651;
+}
+
+.post-item:hover .post-item__caption-title {
+  color: #2d3651;
 }
 
 .post__item {
@@ -1058,26 +1073,31 @@ input[type="text"] {
 }
 
 img[alt="image-post"] {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 
 .post-item__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
 .post-box__title {
   font-size: 2.5rem;
   letter-spacing: 0.1em;
+  margin-bottom: 32px;
   color: #2d3651;
   font-family: "Roboto Slab", serif;
   line-height: 1.2em;
@@ -1092,8 +1112,8 @@ img[alt="image-post"] {
   margin-top: 20px;
 }
 
-.post-item__caption--title {
-  font-family: "Roboto Slab",serif;
+.post-item__caption-title {
+  font-family: "Roboto Slab" , serif;
   font-size: 1.125rem;
   text-align: center;
   color: #637588;
@@ -1101,7 +1121,7 @@ img[alt="image-post"] {
   padding-bottom: 40px;
 }
 
-.post-item__caption--prg {
+.post-item__caption-prg {
   text-align: center;
   color: #637588;
   font-family: "Roboto";
@@ -1547,9 +1567,11 @@ i {
   .skills {
     padding: 20px;
   }
+  .skills-button {
+    margin-top: 20px;
+  }
   .button-accent {
     width: 100%;
-    margin: 10px;
   }
   .about {
     grid-template-columns: 1fr;
