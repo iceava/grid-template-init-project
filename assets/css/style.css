@@ -512,15 +512,16 @@ html {
 
 .header-menu {
   position: absolute;
-  top: 19px;
+  top: 0px;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
 
 .header-menu__box {
   display: grid;
+  padding-top: 20px;
   grid-template-columns: auto 1fr;
   max-width: 1340px;
   margin: auto;
@@ -1449,13 +1450,12 @@ i {
   .header-content__title {
     font-size: 1.875rem;
   }
-  .header-md {
+  .header-menu {
     background: rgba(68, 89, 110, 0.25);
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    bottom: 88.8%;
   }
   .header-nav {
     display: grid;
