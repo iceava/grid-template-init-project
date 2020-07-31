@@ -477,13 +477,15 @@ html {
 }
 
 .header-content__title {
+  display: block;
+  margin-top: 41px;
   font-family: "Roboto Slab" , sans-serif;
   font-size: 3.77rem;
   padding-right: 4px;
   font-weight: 300;
   line-height: 1.2em;
-  letter-spacing: .285rem;
-  padding-left: 2px;
+  letter-spacing: .0793em;
+  padding-left: 6px;
   text-align: center;
 }
 
@@ -521,7 +523,7 @@ html {
 
 .header-menu__box {
   display: grid;
-  padding-top: 20px;
+  padding-top: 19px;
   grid-template-columns: auto 1fr;
   max-width: 1340px;
   margin: auto;
@@ -533,7 +535,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 4px;
+  margin-top: 5px;
   z-index: 1;
   width: 100%;
 }
@@ -578,19 +580,19 @@ html {
   display: block;
   list-style-type: none;
   position: absolute;
-  top: 72px;
+  top: 100px;
   right: 20px;
   background: #41556b;
 }
 
 .buton1 {
-  display: inline-block;
+  display: block;
   color: #ffffff;
   text-decoration: none;
   border: 2px solid #ffffff;
-  padding: 18px 67.4px;
+  padding: 18px 68.5px;
   min-width: 230px;
-  letter-spacing: 0.12rem;
+  letter-spacing: 0.1em;
   -webkit-transition: background-color .5s;
   -o-transition: background-color .5s;
   transition: background-color .5s;
@@ -611,13 +613,13 @@ html {
 }
 
 .buton2 {
-  display: inline-block;
+  display: block;
   color: #ffffff;
   text-decoration: none;
   border: 2px solid #ffffff;
-  padding: 18px 67.4px;
+  padding: 18px 68.5px;
   min-width: 230px;
-  letter-spacing: 0.12rem;
+  letter-spacing: 0.1em;
   -webkit-transition: background-color .5s;
   -o-transition: background-color .5s;
   transition: background-color .5s;
@@ -696,7 +698,7 @@ html {
 .skills-item {
   background-color: #08a33c;
   position: relative;
-  min-height: calc( 33.3333vh - 13.3333px);
+  min-height: calc( 33.3333vh - 13px);
   overflow: hidden;
 }
 
@@ -866,7 +868,7 @@ html {
 .about-content__prg {
   color: #637588;
   letter-spacing: 0.048em;
-  line-height: 1.22em;
+  line-height: 1.17em;
   margin: -3px 0px 18px;
   font-size: 1.125rem;
 }
@@ -892,8 +894,7 @@ img[alt="lamp-webdev"] {
 }
 
 .about-content__img {
-  margin-top: 3px;
-  margin-left: 5px;
+  margin-top: 10px;
   display: grid;
   -ms-flex-line-pack: start;
       align-content: start;
@@ -926,10 +927,18 @@ img[alt="lamp-webdev"] {
   width: 100%;
 }
 
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.14em;
+  font-weight: 400;
+  font-family: 'Roboto' , serif;
+  font-size: 1.1rem;
+}
+
 .form-item__input {
   background-color: rgba(255, 255, 255, 0.05);
   height: 60px;
-  padding: 20px 88px;
+  padding: 0px 30px;
   width: 100%;
   border: 2px solid rgba(255, 255, 255, 0);
   color: #ffffff;
@@ -1102,7 +1111,7 @@ img[alt="image-post"] {
   color: #2d3651;
   font-family: "Roboto Slab", serif;
   line-height: 1.2em;
-  margin-left: 22px;
+  margin-left: 20px;
 }
 
 .post-item__caption {
@@ -1444,6 +1453,9 @@ i {
   .post-box__title {
     font-size: 2rem;
   }
+  .post-btn__accent {
+    margin: 10px 0px 0px;
+  }
 }
 
 @media (max-width: 767.8px) {
@@ -1483,6 +1495,12 @@ i {
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
+  .header-content {
+    margin-top: -20px;
+  }
+  .header-nav__menu-list {
+    text-align: right;
+  }
   .buton1, .buton2 {
     min-width: 170px;
     height: 40px;
@@ -1492,6 +1510,10 @@ i {
     font-size: 1rem;
     margin-right: 20px;
     margin-bottom: -3%;
+  }
+  .header-content__btn {
+    padding: 0px 70px;
+    margin-left: 11px;
   }
   .skills-box {
     grid-gap: 10px;
@@ -1538,12 +1560,21 @@ i {
     font-size: 1.5rem;
     text-align: center;
   }
+  .post-btn__accent {
+    margin: 10px 0px 0px;
+  }
 }
 
 @media (max-width: 575.8px) {
   .header-content__title {
-    letter-spacing: .1em;
+    letter-spacing: .081em;
     padding-top: -20px;
+  }
+  .header-content {
+    margin-top: -110px;
+  }
+  .header-nav__menu-list {
+    text-align: right;
   }
   .buton1, .buton2 {
     min-width: 170px;
@@ -1554,10 +1585,12 @@ i {
     margin-right: 20px;
   }
   .buton1 {
-    margin-bottom: -10%;
+    margin-top: 22px;
+    margin-bottom: -48px;
   }
   .header-content__btn {
     padding: 0px 70px;
+    margin-left: 11px;
   }
   .skills-box {
     grid-gap: 20px;
@@ -1596,6 +1629,6 @@ i {
   }
   .post-btn__accent {
     width: 100%;
-    margin: 0px 10px;
+    margin: 10px 10px 0px 10px;
   }
 }

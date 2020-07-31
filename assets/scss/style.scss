@@ -33,13 +33,15 @@ html{
 }
 
 .header-content__title{
+display: block;
+margin-top: 41px;
 font-family: "Roboto Slab" , sans-serif;
 font-size: 3.77rem;
 padding-right: 4px;
 font-weight:300;
 line-height: 1.2em;
-letter-spacing: .285rem;
-padding-left: 2px;
+letter-spacing: .0793em;
+padding-left: 6px;
 text-align: center;
 @include lg-min {
     font-size: 3.77rem;
@@ -52,7 +54,7 @@ text-align: center;
         font-size: 1.875rem;
     }
     @include sm{
-        letter-spacing: .1em;
+        letter-spacing: .081em;
         padding-top: -20px;
         
         
@@ -99,7 +101,7 @@ width: 100%;
 
 &__box{
     display: grid;
-    padding-top: 20px;
+    padding-top: 19px;
     grid-template-columns:auto 1fr;
     max-width: 1340px;
     margin:auto;
@@ -117,9 +119,17 @@ width: 100%;
 .header-content{
     display: grid;
     justify-content: center;  
-    margin-top:4px;
+    margin-top:5px;
     z-index:1;
     width: 100%;
+    @include md-sm{
+       
+        margin-top: -20px;
+    }
+    @include sm{
+
+        margin-top: -110px;  
+    }
     
 &__box{
     max-width: 1340px;
@@ -178,6 +188,14 @@ line-height:0.8rem;;
    color: #ffffff;
 }
     &__menu{
+        &-list{
+            @include md-sm {
+                text-align: right;
+            }
+            @include sm{
+                text-align: right;
+            }
+        }
         @include md-min{
         display: grid;
         grid-template-columns:repeat(auto-fit , minmax(50px,max-content));
@@ -197,18 +215,18 @@ line-height:0.8rem;;
     display: block;
     list-style-type: none;
     position: absolute;
-    top: 72px;
+    top:100px;
     right:20px;
     background: #41556b;
 }
 @mixin btn {
-    display: inline-block;
+    display:block;
     color: #ffffff;
     text-decoration: none;
     border: 2px solid #ffffff;
-    padding:18px 67.4px;
+    padding:18px 68.5px;
     min-width:230px;
-    letter-spacing: 0.12rem;
+    letter-spacing: 0.1em;
     transition: background-color .5s;
     font-size: 1.125rem;
     background:rgba($color: #fff, $alpha:0.1);
@@ -217,10 +235,12 @@ line-height:0.8rem;;
         transition: .5s;
     }
     &:focus{
-        background-color: $color-accent;
+    background-color: $color-accent;
+        }
     }
    
-}
+   
+
 @include lg-md{
     .buton2 , .buton1{
     min-width: 200px;
@@ -254,13 +274,14 @@ line-height:0.8rem;;
     margin-right: 20px;
     }
 }
+
 .buton1{
     @include btn;
     margin-right:$gap;
     @include sm{
-        margin-bottom:-10%;
-
-    } 
+        margin-top: 22px;
+        margin-bottom:-48px;
+    }  
 }
 
     .buton2{
@@ -278,8 +299,15 @@ line-height:0.8rem;;
    height: 100%;
    width: 100%;
    margin-left:4px;
+   @include md-sm{
+    padding: 0px 70px;
+    margin-left: 11px;
+   }
    @include sm{
        padding: 0px 70px;
+       margin-left: 11px;
+       
+       
    }
   
 }
@@ -375,7 +403,7 @@ line-height:0.8rem;;
 .skills-item{
     background-color: rgb(8, 163, 60);
     position: relative;
-    min-height: calc( 33.3333vh - 13.3333px);
+    min-height: calc( 33.3333vh - 13px );
     overflow: hidden;
  
     &:hover .skills-item__img{
@@ -556,7 +584,7 @@ line-height:0.8rem;;
 .about-content__prg{
     color: #637588;
     letter-spacing: 0.048em;
-    line-height:1.22em;
+    line-height:1.17em;
     margin: -3px 0px 18px;
     font-size: 1.125rem;
     @include md-sm{
@@ -594,8 +622,7 @@ img[alt="lamp-webdev"]{
 
 }
 .about-content__img{
-    margin-top:3px;
-    margin-left: 5px;
+    margin-top:10px;
     display: grid;
     align-content: start;
     justify-items: center;
@@ -652,12 +679,19 @@ img[alt="lamp-webdev"]{
     width:100%;
 
 }
+::-webkit-input-placeholder{
+    color:rgba($color-light, 0.3);
+    letter-spacing: 0.14em;
+    font-weight:400;
+    font-family: 'Roboto' , serif;
+    font-size: 1.1rem;
+}
 
 
 .form-item__input{
     background-color: rgba($color-light ,  0.05);
     height: 60px;
-    padding: 20px 88px;
+    padding: 0px 30px;
     width:100%;
     border: 2px solid rgba($color-light ,  0);
     color: $color-light;
@@ -833,7 +867,7 @@ img[alt="image-post"]{
     color: #2d3651;
     font-family: "Roboto Slab", serif;
     line-height: 1.2em;
-    margin-left:22px;
+    margin-left:$gap;
 
     @include lg-md{
         font-size: 2rem;
@@ -901,9 +935,17 @@ justify-content: center;
     width: 350px;
     margin: 0 auto;
     transition:background-color .5s;
+    @include lg-md{
+       
+        margin: 10px 0px 0px;
+        }
+        @include md-sm{
+            
+            margin: 10px 0px 0px;
+            }
     @include sm{
     width: 100%;
-    margin: 0px 10px;
+    margin: 10px 10px 0px 10px;
     }
     &:hover{
         background-color:$color-accent;
