@@ -484,6 +484,7 @@ html {
   padding-right: 4px;
   font-weight: 300;
   line-height: 1.2em;
+  padding-bottom: 1px;
   letter-spacing: .0793em;
   padding-left: 6px;
   text-align: center;
@@ -543,8 +544,8 @@ html {
 .header-content__box {
   max-width: 1340px;
   display: grid;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 19px;
+  padding-right: 19px;
   text-align: center;
   height: 100%;
 }
@@ -647,15 +648,12 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   padding: 12px 50px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: 100%;
   width: 100%;
-  margin-left: 4px;
+  margin-left: 3px;
 }
 
 .header-nav__link {
@@ -1388,10 +1386,15 @@ i {
 @media (min-width: 992px) {
   .header-content__title {
     font-size: 3.77rem;
+    margin-top: 39px;
   }
   .header-content__box {
     margin-top: -33px;
     margin-left: -2px;
+  }
+  .header-content__btn {
+    padding-bottom: 11px;
+    margin-left: 4px;
   }
   .skills-box {
     grid-gap: 10px;
@@ -1419,10 +1422,11 @@ i {
   .header-content__title {
     font-size: 2.5rem;
     margin: 0 0 43px;
-    padding-right: 3px;
+    padding-right: 2px;
+    padding-bottom: 2px;
   }
   .header-content {
-    margin-top: 36px;
+    margin-top: 34px;
   }
   .header-content__box {
     margin-left: -4px;
@@ -1436,8 +1440,8 @@ i {
     margin-right: 20px;
   }
   .header-content__btn {
-    margin-top: -12px;
-    margin-left: 11.7px;
+    margin-top: -14px;
+    margin-left: 12px;
   }
   .skills-box {
     grid-gap: 10px;
@@ -1531,8 +1535,9 @@ i {
     margin-bottom: -3%;
   }
   .header-content__btn {
+    margin-top: -1px;
     padding: 0px 70px;
-    margin-left: 11px;
+    margin-left: 12px;
   }
   .skills-box {
     grid-gap: 10px;
@@ -1594,6 +1599,10 @@ i {
   .header-content {
     margin-top: -43px;
   }
+  .header-content__box {
+    margin-top: 1.5px;
+    padding-left: 17.2px;
+  }
   .header-nav__menu-list {
     text-align: right;
   }
@@ -1607,10 +1616,9 @@ i {
   }
   .buton1 {
     margin-bottom: 20px;
-    margin-top: 20px;
   }
   .header-content__btn {
-    padding: 0px 72px;
+    padding: 21px 70px 0px 70px;
     margin-left: 11px;
   }
   .skills-box {
