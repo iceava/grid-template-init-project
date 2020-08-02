@@ -1179,7 +1179,7 @@ img[alt="image-post"] {
   text-align: center;
   color: #637588;
   letter-spacing: 0.048em;
-  padding-bottom: 40px;
+  padding-bottom: 34px;
 }
 
 .post-item__caption-prg {
@@ -1403,6 +1403,12 @@ html {
     grid-template-columns: 1fr 274px;
     grid-gap: 100px;
   }
+  .post-box__title {
+    margin-bottom: 33px;
+  }
+  .post-item__caption {
+    padding: 17px 20px;
+  }
 }
 
 @media (max-width: 991.8px) {
@@ -1461,6 +1467,9 @@ html {
     margin-top: 0px;
     margin-top: 20px;
   }
+  .post-box {
+    margin: 80px 10px;
+  }
   .post__item {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p6 p6";
@@ -1469,6 +1478,10 @@ html {
   }
   .post-box__title {
     font-size: 2rem;
+    margin-left: 10px;
+  }
+  .post-item__caption {
+    padding: 17px 20px;
   }
   .post-btn__accent {
     margin: 10px 0px 0px;
@@ -1578,6 +1591,9 @@ html {
   .form-item:nth-of-type(1) {
     grid-column: 1 / span 2;
   }
+  .post-box {
+    margin: 60px 10px;
+  }
   .post__item {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
@@ -1586,7 +1602,11 @@ html {
   }
   .post-box__title {
     font-size: 1.5rem;
-    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 25px;
+  }
+  .post-item__caption {
+    padding: 17px 20px;
   }
   .post-btn__accent {
     margin: 10px 0px 0px;
@@ -1660,9 +1680,18 @@ html {
   .form-container {
     grid-template-columns: 1fr;
   }
+  .post-box {
+    margin: 60px 10px;
+  }
   .post-box__title {
     font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 27px;
+    margin-left: 0px;
+  }
+  .post-item__caption {
+    padding-bottom: 15px;
+    padding-top: 19px;
   }
   .post-btn__accent {
     width: 100%;

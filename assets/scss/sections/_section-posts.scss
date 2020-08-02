@@ -5,11 +5,21 @@
 .post-box{
     max-width:1340px;
     margin: 98px 0px;
+    @include lg-md{
+        margin:80px 10px;
+    }
+    @include md-sm{
+        margin:60px 10px
+    }
+    @include sm{
+        margin:60px 10px 
+    }
 }
 .post-item{
     background-color: $color-light-dark;
     display:grid;
     justify-content: center;
+   
     &:hover .post-item__link{
         background-color:#d8d8d8;
     }
@@ -119,18 +129,26 @@ img[alt="image-post"]{
     font-family: "Roboto Slab", serif;
     line-height: 1.2em;
     margin-left:$gap;
+    @include lg-min{
+        margin-bottom: 33px;
+    }
 
     @include lg-md{
         font-size: 2rem;
+        margin-left:$gap - 10px;
     }
     @include md-sm{
         font-size: 1.5rem;
-        text-align: center;
+        margin-left:$gap - 10px;
+        margin-bottom: $gap+5px;
+       
     }
 
     @include sm{
         font-size: 1.5rem;
         text-align: center;
+        margin-bottom: $gap+7px;
+        margin-left:$gap - 20px;
     }
 }
 .post-item__caption{
@@ -138,6 +156,19 @@ img[alt="image-post"]{
     align-content: center;
     padding:$gap;
     margin-top: $gap;
+    @include lg-min{
+        padding:17px $gap;
+    }
+    @include lg-md{
+        padding:17px $gap;
+    }
+    @include md-sm{
+        padding:17px $gap;
+    }
+    @include sm{
+        padding-bottom:15px;
+        padding-top:19px;
+    }
 }
 .post-item__caption-title{
     font-family: "Roboto Slab" , serif;
@@ -145,7 +176,7 @@ img[alt="image-post"]{
     text-align: center;
     color: $color-gray;
     letter-spacing: 0.048em;
-    padding-bottom: $gap * 2;
+    padding-bottom: $gap*1.7;
     
 }
 
