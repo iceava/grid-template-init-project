@@ -1459,7 +1459,7 @@ html {
   }
   .about-content__img {
     margin-top: 0px;
-    margin-top: 1 20px;
+    margin-top: 20px;
   }
   .post__item {
     grid-template-columns: repeat(3, 1fr);
@@ -1546,23 +1546,29 @@ html {
   .skills-item__link {
     font-size: 1.1rem;
   }
+  .abt {
+    padding: 60px 0px;
+  }
   .about {
     grid-template-columns: 1fr 236px;
     grid-gap: 20px;
   }
   .about-content__title {
     font-size: 1.5rem;
-    text-align: center;
+    margin-bottom: 30px;
   }
   .about-content__prg {
-    font-size: 0.88rem;
+    font-size: 1rem;
   }
   .about-content__prg:first-of-type::after {
     right: -10px;
   }
   .about-content__img {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    justify-items: center;
     margin-top: 0px;
-    margin-top: 1 20px;
+    margin-top: 20px;
   }
   .form-container {
     grid-template-columns: 1fr 1fr;
@@ -1612,7 +1618,6 @@ html {
   .header-content__title {
     font-size: 1.875rem;
     letter-spacing: 1rem;
-    padding-top: -20px;
     letter-spacing: .0793em;
   }
   .header-content__btn {
@@ -1630,6 +1635,9 @@ html {
   .skills-button {
     margin-top: 20px;
   }
+  .abt {
+    padding: 60px 0px;
+  }
   .about {
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -1637,12 +1645,17 @@ html {
   .about-content__title {
     font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 30px;
   }
   .about-content__prg {
-    font-size: 0.88rem;
+    font-size: 1rem;
   }
   .about-content__prg:first-of-type::after {
     display: none;
+  }
+  .about-content__img {
+    margin-top: 0px;
+    margin-top: 20px;
   }
   .form-container {
     grid-template-columns: 1fr;
