@@ -1,0 +1,25 @@
+.header-logo{
+    padding-top: 22.5px;
+    font-size: 1.5rem;
+    line-height:0.8rem;;
+    
+    
+    
+    }
+    
+    .header-logo__link{
+        display:block;
+        text-decoration: none;
+        color: $color-light;
+        letter-spacing: 0.328rem;
+        padding: 3px; 
+          
+        
+    
+    }
+    .header-logo__accent{
+        border: 3px solid $color-highlight;
+        padding:13px 1px 12px 5px;
+        margin-right:4px;
+       
+    }

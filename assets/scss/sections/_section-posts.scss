@@ -1,0 +1,208 @@
+.post{
+    display: flex;
+    justify-content: center;
+}
+.post-box{
+    max-width:1340px;
+    margin: 98px 0px;
+}
+.post-item{
+    background-color: $color-light-dark;
+    display:grid;
+    justify-content: center;
+    &:hover .post-item__link{
+        background-color:#d8d8d8;
+    }
+
+   &:hover  .post-item__img{
+        transform: scale(1.1);
+        transition: transform .5s;
+    }
+
+    &:hover .post-item__caption-prg{
+        color:$color-primary;
+    }
+    &:hover .post-item__caption-title{
+        color:$color-primary;
+    }
+    
+    overflow: hidden;
+
+}
+.post__item{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-areas : "p1 p1 p2 p3"
+                          "p4 p5 p6 p6" ;
+    grid-gap:$gap;
+    padding: 23px $gap $gap $gap ;
+    
+    @include lg{
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+        grid-template-areas : "p1 p1 p2 p3"
+                              "p4 p5 p6 p6" ;
+        grid-gap:$gap;
+        padding: 23px $gap $gap $gap ;
+    }
+
+    @include lg-md{
+    grid-template-columns:repeat(3,1fr);
+    grid-template-areas : "p1 p1 p2"
+                          "p3 p4 p4"
+                          "p5 p6 p6";
+                          
+    grid-gap:$gap;
+    padding: 10px ;
+  
+    }
+    @include md-sm{
+
+            grid-template-columns:1fr 1fr;
+            grid-template-areas : "p1 p2"
+                                  "p3 p4"
+                                  "p5 p6";
+                                  
+                                  
+            grid-gap:$gap;
+            padding: 10px;
+    }
+    @include md {
+
+        grid-template-columns:1fr;
+        grid-template-areas : "p1"
+                              "p2"
+                              "p3"
+                              "p4"
+                              "p5"
+                              "p6";
+                              
+        grid-gap:$gap;
+        padding:10px ;
+}
+}
+
+.post-item:nth-of-type(1){
+    grid-area: p1;
+}
+.post-item:nth-of-type(2){
+    grid-area: p2;
+}
+.post-item:nth-of-type(3){
+    grid-area: p3;
+}
+.post-item:nth-of-type(4){
+    grid-area: p4;
+}
+.post-item:nth-of-type(5){
+    grid-area: p5;
+}
+.post-item:nth-of-type(6){
+    grid-area: p6;
+}
+img[alt="image-post"]{
+   object-fit: cover;
+   width: 100%;
+   
+}
+.post-item__img{
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    transition: transform .5s;
+}
+.post-box__title{
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 32px;
+    color: $color-primary;
+    font-family: "Roboto Slab", serif;
+    line-height: 1.2em;
+    margin-left:$gap;
+
+    @include lg-md{
+        font-size: 2rem;
+    }
+    @include md-sm{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    @include sm{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+.post-item__caption{
+    display:grid;
+    align-content: center;
+    padding:$gap;
+    margin-top: $gap;
+}
+.post-item__caption-title{
+    font-family: "Roboto Slab" , serif;
+    font-size: 1.125rem;
+    text-align: center;
+    color: $color-gray;
+    letter-spacing: 0.048em;
+    padding-bottom: $gap * 2;
+    
+}
+
+.post-item__caption-prg{
+    text-align: center;
+    color: $color-gray;
+    font-family:"Roboto";
+    font-size: 1rem;
+    letter-spacing: 0.001em;
+    
+}
+.post-item__link{
+    text-decoration: none;
+    display: grid;
+    grid-template-rows: 300px 1fr;
+    height: 100%;
+    padding-bottom: $gap;
+    
+    
+    
+}
+.post-btn{
+display:flex;
+justify-content: center;
+}
+.post-btn__accent{
+    display: block;
+    text-decoration:none;
+    border:2px solid  $color-primary;
+    background-color: rgba(45, 54, 81, 0.8);
+    display: block;
+    height: 60px;
+    padding: 18px 40px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.112em;
+    font-size: 1.10rem;
+    width: 350px;
+    margin: 0 auto;
+    transition:background-color .5s;
+    @include lg-md{
+       
+        margin: 10px 0px 0px;
+        }
+        @include md-sm{
+            
+            margin: 10px 0px 0px;
+            }
+    @include sm{
+    width: 100%;
+    margin: 10px 10px 0px 10px;
+    }
+    &:hover{
+        background-color:$color-accent;
+        transition:background-color .5s;
+    }
+    &:focus{
+        background-color:$color-accent;
+    }
+}

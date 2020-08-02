@@ -1,0 +1,106 @@
+.form{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: $color-primary;
+
+}
+.form-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:$gap;
+    justify-items: center;
+    width: 100%;
+    max-width: 1340px;
+    padding-right: $gap;
+    padding-left: $gap;
+    
+    @include md-sm{
+        grid-template-columns:1fr 1fr;
+        grid-gap:$gap;
+        justify-items: center;
+       
+    }  
+    @include sm{
+        grid-template-columns:1fr;
+       
+    }
+}
+
+.form-item:nth-of-type(1) {
+    @include md-sm
+    {
+    grid-column: 1 / span 2;
+    }
+}
+.form-item{
+    width:100%;
+
+}
+::-webkit-input-placeholder{
+    color:rgba($color-light, 0.3);
+    letter-spacing: 0.14em;
+    font-weight:400;
+    font-family: 'Roboto' , serif;
+    font-size: 1.1rem;
+}
+
+
+.form-item__input{
+    background-color: rgba($color-light ,  0.05);
+    height: 60px;
+    padding: 0px 30px;
+    width:100%;
+    border: 2px solid rgba($color-light ,  0);
+    color: $color-light;
+    letter-spacing: 0.1em;
+    font-size: 1.125rem;
+    transition: background-color .5s, border-color .5s;
+    border-bottom:solid 2px rgba($color-light , 0.2);
+    font-size: 1.125rem;
+    letter-spacing: 0.15em;
+
+   &:hover{
+    border-color: rgba($color-light , 0.15);
+    border-bottom: 2px solid $color-light;
+    background-color: rgba($color-light , 0.15);
+    transition: background-color .5s,  border-color .5s;
+   }
+   &:focus{
+    outline:none;
+    border: 2px solid rgba($color-light, 0.15);
+    border-bottom: 2px solid $color-light;
+    background-color: rgba($color-light , 0.15);
+   }
+}
+
+input[type="text"]{
+    padding: 1px 28px;
+}
+.form-item__btn{
+    display:block;
+    width: 100%;
+    color:$color-light;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom:solid 2px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 60px;
+    padding: 18px 50px;
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color .5s, border .5s;
+    &:hover{
+        background-color:$color-accent;
+        border:2px solid $color-light;
+        transition:background-color .5s, border .5s;
+
+    }
+    &:focus{
+        outline: none;
+        background-color:$color-accent;
+        border:2px solid $color-light;
+    }
+
+}

@@ -1,0 +1,115 @@
+
+    .abt{
+        background:$color-gray-light;
+        letter-spacing: 0.055em;
+        padding:100px 0px 80px 0px;
+        height:100%;
+    
+    }
+
+.about{
+    display:grid;
+    
+    max-width: 1340px;
+    margin: auto;
+    padding: 0px 19.5px;
+   
+    
+
+    @include lg-min{
+        grid-template-columns: 1fr 274px;
+        grid-gap: 100px; 
+    }
+    @include lg-md{
+        grid-template-columns: 1fr 271px;
+        grid-gap: 40px;
+    }
+    @include md-sm{
+        grid-template-columns: 1fr 236px;
+        grid-gap: $gap;
+    }
+    @include sm{
+        grid-template-columns: 1fr;
+        grid-gap: $gap;
+    }
+}
+.about-content__title{
+    margin-top: 0px;
+    letter-spacing: 0.1em;
+    color: $color-primary;
+    font-family: "Roboto Slab" , serif;
+    line-height: 1.2em;
+    font-size: 2.5rem;
+    margin-bottom:56px;
+  
+    @include lg-md{
+        font-size: 2rem;
+    }
+    @include md-sm{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    @include sm{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+.about-content__prg{
+    color: $color-gray;
+    letter-spacing: 0.048em;
+    line-height:1.17em;
+    margin: -3px 0px 18px;
+    font-size: 1.125rem;
+    @include md-sm{
+        font-size: 0.88rem;
+    }
+    @include sm{
+        font-size: 0.88rem;
+    }
+}
+.about-content__prg:first-of-type{
+    position: relative;
+    margin-top: -5px; 
+}
+.about-content__prg:first-of-type::after{
+    position: absolute;
+    top: 0px;
+    right:-50px;
+    width: 2px;
+    height: 200px;
+    content: "";
+    background-color: rgba(99, 117, 136, 0.1);
+    @include lg-md{
+        right: -$gap;
+    }
+    @include md-sm{
+        right: -10px;
+    }
+    @include sm{
+        display: none;
+    }
+}
+img[alt="lamp-webdev"]{
+    max-height: 480px;
+    max-width:100%;
+
+}
+.about-content__img{
+    margin-top:10px;
+    display: grid;
+    align-content: start;
+    justify-items: center;
+    @include lg-md{
+        margin-top:0px;
+        margin-top: 1$gap;
+    
+    }
+    @include md-sm{
+        
+        margin-top:0px;
+        margin-top:1$gap;
+     
+
+    }
+
+}
